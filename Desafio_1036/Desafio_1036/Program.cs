@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 class URI
 {
@@ -15,9 +16,16 @@ class URI
         double r1 = (-B + Math.Sqrt(delta)) / (2 * A);
         double r2 = (-B - Math.Sqrt(delta)) / (2 * A);
 
-        
+        if (A == 0 || delta < 0)
+        {
+            Console.WriteLine("Impossível calcular");
+        }
+        else
+        {
+            Console.WriteLine($"R1 = {r1.ToString("f5", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"R2 = {r2.ToString("f5", CultureInfo.InvariantCulture)}");
 
 
+        }
     }
-
 }
