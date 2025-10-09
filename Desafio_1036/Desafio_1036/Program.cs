@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Globalization;
-
 class URI
 {
 
     static void Main(string[] args)
     {
 
-        double[] valores = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+        string[] valores = Console.ReadLine().Split(' ');
 
-        double A = valores[0], B = valores[1], C = valores[2];
+        double A = double.Parse(valores[0]), B = double.Parse(valores[1]), C = double.Parse(valores[2]);
 
         double delta = Math.Pow(B, 2) - 4 * A * C;
 
@@ -18,7 +17,7 @@ class URI
 
         if (A == 0 || delta < 0)
         {
-            Console.WriteLine("Impossível calcular");
+            Console.WriteLine("Impossivel calcular");
         }
         else
         {
